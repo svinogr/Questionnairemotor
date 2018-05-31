@@ -19,6 +19,7 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
     private AnswerDAO answerDAO;
     private String category;
     private Cursor cursor;
+    private Context context;
 
     public MyLoader(Context context) {
         super(context);
@@ -35,8 +36,9 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
 
     @Override
     public List<Question> loadInBackground() {
-        List<Question> list = new ArrayList<>();
-        Cursor answerByQuation;
+        QuestionDAO questionDAO = new QuestionDAO(context);
+        List<Question> list =  questionDAO.getQuestions(category);
+       /* Cursor answerByQuation;
 
 
         if (category != null) {
@@ -53,7 +55,7 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
                     question.setImg(cursor.getString(3));
                     question.setComment(stringToUpperCase(cursor.getString(4)));
 
-                  /*  answerByQuation = answerDAO.getAnswerByQuation(question.getId());
+                  *//*  answerByQuation = answerDAO.getAnswerByQuation(question.getId());
                     if (answerByQuation.moveToFirst()) {
                         do {
                             Answer answer = new Answer();
@@ -66,7 +68,7 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
                         } while (answerByQuation.moveToNext());
                     }
                     list.add(question);
-                    answerByQuation.close();*/
+                    answerByQuation.close();*//*
 
                     list.add(question);
                 }
@@ -76,7 +78,7 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
 
             }
         }
-        cursor.close();
+        cursor.close();*/
         /*if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {

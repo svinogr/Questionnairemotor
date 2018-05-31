@@ -20,10 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import info.upump.questionnairegranjpravo.adapter.QuestionAdapter;
-import info.upump.questionnairegranjpravo.adapter.QuestionAdapterWithoutComment;
-import info.upump.questionnairegranjpravo.entity.Question;
-import info.upump.questionnairegranjpravo.R;
 import info.upump.questionnairegranjpravo.db.MyLoader;
+import info.upump.questionnairegranjpravo.entity.Question;
 
 /**
  * Created by explo on 11.10.2017.
@@ -91,19 +89,13 @@ public class CaptainFragment extends Fragment implements AdapterView.OnItemClick
         progressBar = root.findViewById(R.id.progressSearchCategory);
         progressBar.setVisibility(progressBar.VISIBLE);
 
-
        linearLayoutManager = new LinearLayoutManager(getContext());
-        //GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),3);
 
         recyclerView = root.findViewById(R.id.listQuestionSearchCategory);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
-  //      recyclerView.setLayoutManager(gridLayoutManager);
-        questionAdapter = new QuestionAdapterWithoutComment(getActivity(), list);
+        questionAdapter = new QuestionAdapter(getActivity(), list);
         recyclerView.setAdapter(questionAdapter);
-   /*     SnapHelper snapHelper = new LinearSnapHelper();
-        snapHelper.attachToRecyclerView(recyclerView);
-*/
         return root;
     }
 

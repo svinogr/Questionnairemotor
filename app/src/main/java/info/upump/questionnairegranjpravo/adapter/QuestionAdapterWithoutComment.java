@@ -1,3 +1,4 @@
+/*
 package info.upump.questionnairegranjpravo.adapter;
 
 import android.app.Activity;
@@ -7,9 +8,11 @@ import java.util.List;
 
 import info.upump.questionnairegranjpravo.entity.Question;
 
+*/
 /**
  * Created by explo on 15.10.2017.
- */
+ *//*
+
 
 public class QuestionAdapterWithoutComment extends QuestionAdapter {
     public QuestionAdapterWithoutComment(Activity activity, List<Question> list) {
@@ -23,3 +26,4 @@ public class QuestionAdapterWithoutComment extends QuestionAdapter {
 
     }
 }
+*/

@@ -12,6 +12,6 @@
         android:icon="@drawable/ic_mail"
         android:orderInCategory="100"
         android:title="@string/mailto"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
 </menu>

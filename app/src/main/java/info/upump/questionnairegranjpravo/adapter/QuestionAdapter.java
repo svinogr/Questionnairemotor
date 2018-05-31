@@ -28,7 +28,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
     private Activity activity;
     protected List<Question> list;
     private CategoryFilter filter;
-    protected QuestionViewHolder holder;
     private List<Answer> answers;
 
     public QuestionAdapter(Activity activity, List<Question> list) {
@@ -48,10 +47,10 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
 
     @Override
     public void onBindViewHolder(final QuestionViewHolder holder, final int position) {
-        this.holder = holder;
+       holder.bind(list.get(position));
 
-        holder.linearLayoutAnswer.removeAllViews();
-
+     //   holder.linearLayoutAnswer.removeAllViews();
+/*
         holder.number.setText("Вопрос номер: " + String.valueOf(position + 1));
 
        // holder.questionBody.setText("Вопрос: " + list.get(position).getBody());
@@ -100,7 +99,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
                 text.setText(" - " + answer.getBody());
                 holder.linearLayoutAnswer.addView(text);
             }
-        }
+        }*/
     }
 
     public void setList(List<Question> list) {
@@ -116,11 +115,10 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
         return list.size();
     }
 
-    protected void setComment(int position) {
+   /* protected void setComment(int position) {
         if (list.get(position).getComment() != null) {
-            //holder.comment.setText("Коментарий: " + list.get(position).getComment());
             holder.comment.setText("Коментарий: "+list.get(position).getComment());
         }
 
-    }
+    }*/
 }

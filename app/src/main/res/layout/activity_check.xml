@@ -177,46 +177,29 @@
                     tools:text="Что делать? " />
 
 
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/largeLabe3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <View
+                    android:id="@+id/com_div"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
                     android:layout_marginTop="8dp"
-                    android:background="#5C6BC0"
-                    app:layout_constraintTop_toBottomOf="@+id/check_activity_question_text_view">
-
-                    <TextView
-                        android:id="@+id/check_activity_label_answer_text_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/label_answer"
-                        android:textColor="@color/cardview_light_background"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </android.support.constraint.ConstraintLayout>
+                    android:background="#C5CAE9"
+                    app:layout_constraintTop_toBottomOf="@+id/check_activity_question_text_view" />
 
                 <RadioGroup
                     android:id="@+id/check_activity_answers_group"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/largeLabe3" />
+                    app:layout_constraintTop_toBottomOf="@+id/com_div" />
 
                 <ImageView
                     android:id="@+id/check_activity_img"
@@ -231,7 +214,8 @@
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/largeLabe3" />
+                    app:layout_constraintTop_toBottomOf="@+id/com_div" />
+
 
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>

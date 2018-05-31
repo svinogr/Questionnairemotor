@@ -26,4 +26,6 @@
     <string name="label_question">Вопроc:</string>
     <string name="label_answer">Выберите вариант:</string>
     <string name="title_check_acrivity">Проверь себя</string>
+    <string name="number_question">Вопрос номер: %1$d</string>
+    <string name="answer_text">- %1$s</string>
 </resources>
