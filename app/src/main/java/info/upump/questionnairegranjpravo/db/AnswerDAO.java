@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import info.upump.questionnairegranjpravo.entity.Answer;
 
 /**
@@ -32,10 +35,11 @@ public class AnswerDAO extends DBDAO {
                         DataBaseHelper.TABLE_KEY_ID,
                         DataBaseHelper.TABLE_KEY_BODY,
                         DataBaseHelper.TABLE_KEY_RIGHT},
-                        DataBaseHelper.TABLE_KEY_ID_QUESTION + "=? ", new String[]{String.valueOf(id)}, null, null, null, null);
+                DataBaseHelper.TABLE_KEY_ID_QUESTION + "=? ", new String[]{String.valueOf(id)}, null, null, null, null);
 
         return cursor;
     }
+
     public Cursor getCursorAnswer() {
         Cursor cursor = database.query(DataBaseHelper.TABLE_ANSWER,
                 new String[]{
@@ -46,5 +50,40 @@ public class AnswerDAO extends DBDAO {
                 null, null, null, null, null, null
         );
         return cursor;
+    }
+
+    public List<Answer> getAnswerByParentId(long id) {
+        Cursor cursor = null;
+        List<Answer> answerList = new ArrayList<>();
+        try {
+            cursor = database.query(DataBaseHelper.TABLE_ANSWER,
+                    new String[]{
+                            DataBaseHelper.TABLE_KEY_ID,
+                            DataBaseHelper.TABLE_KEY_BODY,
+                            DataBaseHelper.TABLE_KEY_RIGHT},
+                    DataBaseHelper.TABLE_KEY_ID_QUESTION + "=? ", new String[]{String.valueOf(id)}, null, null, null, null);
+
+
+            if (cursor.moveToFirst()) {
+                do {
+                    Answer answer = new Answer();
+                    answer.setId(cursor.getInt(0));
+                    answer.setBody((cursor.getString(1)));
+                    answer.setRight(cursor.getInt(2));
+                    answerList.add(answer);
+
+                } while (cursor.moveToNext());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+
+
+        return answerList;
     }
 }

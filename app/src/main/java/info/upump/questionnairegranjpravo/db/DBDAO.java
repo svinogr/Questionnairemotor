@@ -10,7 +10,7 @@ import static info.upump.questionnairegranjpravo.db.DataBaseHelper.PASS;
 public class DBDAO {
     protected SQLiteDatabase database;
     private DataBaseHelper dataBaseHelper;
-    private Context context;
+    protected Context context;
 
     public DBDAO(Context context) {
         this.context = context;

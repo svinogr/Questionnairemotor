@@ -87,23 +87,23 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.mailto) {
-            Intent email = new Intent(Intent.ACTION_SEND);
-            email.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.email_mail)});
-            email.putExtra(Intent.EXTRA_SUBJECT,getString(R.string.mail_subject));
-            email.putExtra(Intent.EXTRA_TEXT, "");
-            //email.setType("message/rfc822");
-            email.setType("plain/text");
-            startActivity(Intent.createChooser(email, "Choose an Email client :"));
-            return true;
+        Intent intent;
+        switch (id){
+            case R.id.mailto:
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.email_mail)});
+                intent.putExtra(Intent.EXTRA_SUBJECT,getString(R.string.mail_subject));
+                intent.putExtra(Intent.EXTRA_TEXT, "");
+                //email.setType("message/rfc822");
+                intent.setType("plain/text");
+                startActivity(Intent.createChooser(intent, "Choose an Email client :"));
+                break;
+            case R.id.checkit:
+                intent = CheckActivity.createIntent(this, "капитан");
+                startActivity(intent);
+                break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 

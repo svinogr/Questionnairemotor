@@ -21,4 +21,9 @@
     <string name="data_base_path">/data/data/info.upump.questionnairegranjpravo/databases/</string>
     <string name="mail_subject">Тест для мигрантов. Гражданское право</string>
     <string name="checkit">проверь себя</string>
+    <string name="label_good_answer">Правильно:</string>
+    <string name="label_bad_answer">Неправильно:</string>
+    <string name="label_question">Вопроc:</string>
+    <string name="label_answer">Выберите вариант:</string>
+    <string name="title_check_acrivity">Проверь себя</string>
 </resources>

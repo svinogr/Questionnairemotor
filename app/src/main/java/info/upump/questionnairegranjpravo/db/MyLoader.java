@@ -76,6 +76,7 @@ public class MyLoader extends AsyncTaskLoader<List<Question>> {
 
             }
         }
+        cursor.close();
         /*if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {
