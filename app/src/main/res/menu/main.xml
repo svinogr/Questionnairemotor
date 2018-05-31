@@ -2,10 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/mailto"
-
+        android:id="@+id/checkit"
+        android:icon="@drawable/ic_playlist_add_check_black_24dp"
         android:orderInCategory="100"
+        android:title="@string/checkit"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mailto"
         android:icon="@drawable/ic_mail"
-         app:showAsAction="always"
-        android:title="@string/mailto" />
+        android:orderInCategory="100"
+        android:title="@string/mailto"
+        app:showAsAction="ifRoom" />
+
 </menu>
