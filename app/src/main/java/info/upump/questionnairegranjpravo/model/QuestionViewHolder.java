@@ -1,6 +1,7 @@
 package info.upump.questionnairegranjpravo.model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -18,19 +19,16 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 
+import info.upump.questionnairegranjpravo.ImageActivity;
 import info.upump.questionnairegranjpravo.R;
 import info.upump.questionnairegranjpravo.entity.Answer;
 import info.upump.questionnairegranjpravo.entity.Question;
 
-/**
- * Created by explo on 23.09.2017.
- */
 
 public class QuestionViewHolder extends RecyclerView.ViewHolder {
     public TextView number;
     public TextView questionBody;
     public ImageView img;
-    public TextView comment;
     public LinearLayout linearLayoutAnswer;
     public View comDiv;
     private Context context;
@@ -44,8 +42,14 @@ public class QuestionViewHolder extends RecyclerView.ViewHolder {
         number = itemView.findViewById(R.id.number);
         questionBody = itemView.findViewById(R.id.question);
         img = itemView.findViewById(R.id.img);
-        comment = itemView.findViewById(R.id.comment);
         comDiv = itemView.findViewById(R.id.com_div);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = ImageActivity.createIntent(context, question.getImg());
+                context.startActivity(intent);
+            }
+        });
     }
 
     public void bind(Question question) {

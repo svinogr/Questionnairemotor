@@ -28,4 +28,15 @@
     <string name="title_check_acrivity">Проверь себя</string>
     <string name="number_question">Вопрос номер: %1$d</string>
     <string name="answer_text">- %1$s</string>
+    <string name="title_result">Ваш результат</string>
+    <string name="title_count_result">Правильных ответов: %1$s </string>
+    <string name="title_finish">Закончить</string>
+    <string name="title_restart">Повторить</string>
+    <string name="toast_right">Правильный ответ</string>
+    <string name="toast_false">Неправильный ответ</string>
+    <string name="title_cap_fr">Гражданское право</string>
+    <string name="title_choose_questions">Тестирование</string>
+    <string name="title_interval_holder">Вопросы c %1$d по %2$d</string>
+    <string name="title_interval_card">Список вопросов:</string>
+    <string name="interval_title_text">Часть %1d</string>
 </resources>

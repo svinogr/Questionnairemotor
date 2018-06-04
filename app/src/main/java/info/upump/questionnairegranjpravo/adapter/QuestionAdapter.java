@@ -43,63 +43,9 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
         return new QuestionViewHolder(view);
     }
 
-
-
     @Override
     public void onBindViewHolder(final QuestionViewHolder holder, final int position) {
        holder.bind(list.get(position));
-
-     //   holder.linearLayoutAnswer.removeAllViews();
-/*
-        holder.number.setText("Вопрос номер: " + String.valueOf(position + 1));
-
-       // holder.questionBody.setText("Вопрос: " + list.get(position).getBody());
-        holder.questionBody.setText(list.get(position).getBody());
-
-        setComment(position);
-
-        String s = list.get(position).getImg();
-
-        if (s != null) {
-            holder.img.setImageResource(activity.getResources().getIdentifier("drawable/" + s, null, activity.getApplication().getApplicationContext().getPackageName()));
-            holder.img.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
-        } else {
-            holder.img.setImageDrawable(null);
-            holder.img.setLayoutParams(new LinearLayout.LayoutParams(0, 0));
-        }
-        if(list.get(position).getAnswers().size()<1) {
-
-            TaskGetAnswer taskGetAnswer = new TaskGetAnswer(activity, holder, list);
-            taskGetAnswer.execute(list.get(position).getId());
-            try {
-                answers = taskGetAnswer.get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            }
-        }else {
-            for (Answer answer :
-                    list.get(position).getAnswers()) {
-                CheckedTextView text = new CheckedTextView(activity.getApplicationContext());
-                switch (answer.getRight()) {
-                    case 1:
-                        text.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                        text.setCheckMarkDrawable(android.R.drawable.checkbox_on_background);
-                        text.setTypeface(null, Typeface.BOLD_ITALIC);
-                        text.setChecked(true);
-                        break;
-                    case 0:
-                        text.setTypeface(null, Typeface.ITALIC);
-                        break;
-                    case -1:
-                        break;
-                }
-                text.setTextColor(Color.parseColor("#FF424242"));
-                text.setText(" - " + answer.getBody());
-                holder.linearLayoutAnswer.addView(text);
-            }
-        }*/
     }
 
     public void setList(List<Question> list) {
@@ -114,11 +60,4 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
     public int getItemCount() {
         return list.size();
     }
-
-   /* protected void setComment(int position) {
-        if (list.get(position).getComment() != null) {
-            holder.comment.setText("Коментарий: "+list.get(position).getComment());
-        }
-
-    }*/
 }

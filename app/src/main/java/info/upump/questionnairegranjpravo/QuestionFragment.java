@@ -1,3 +1,4 @@
+/*
 package info.upump.questionnairegranjpravo;
 
 
@@ -26,9 +27,11 @@ import info.upump.questionnairegranjpravo.R;
 import info.upump.questionnairegranjpravo.db.DataBaseHelper;
 import info.upump.questionnairegranjpravo.db.MyLoader;
 
+*/
 /**
  * Created by explo on 09.10.2017.
- */
+ *//*
+
 
 public class QuestionFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<Question>> {
     private RecyclerView recyclerView;
@@ -137,3 +140,4 @@ public class QuestionFragment extends Fragment implements LoaderManager.LoaderCa
 
     }
 }
+*/

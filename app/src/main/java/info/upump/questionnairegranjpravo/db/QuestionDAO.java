@@ -4,15 +4,15 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import net.sqlcipher.DatabaseUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import info.upump.questionnairegranjpravo.entity.Answer;
+import info.upump.questionnairegranjpravo.entity.Interval;
 import info.upump.questionnairegranjpravo.entity.Question;
 
-/**
- * Created by explo on 26.09.2017.
- */
 
 public class QuestionDAO extends DBDAO {
     private Cursor cursor;
@@ -89,12 +89,16 @@ public class QuestionDAO extends DBDAO {
             }
         }
         AnswerDAO answerDAO = new AnswerDAO(context);
-        for (Question q: questions){
+        for (Question q : questions) {
             List<Answer> answers = answerDAO.getAnswerByParentId(q.getId());
             q.getAnswers().addAll(answers);
         }
 
         return questions;
+    }
+
+    public int getCount() {
+        return (int) DatabaseUtils.queryNumEntries(database, DataBaseHelper.TABLE_QUESTION);
     }
 
     public Cursor getCursorQuestion() {
@@ -142,4 +146,48 @@ public class QuestionDAO extends DBDAO {
         return s != null && s.length() != 0 ? s.substring(0, 1).toUpperCase() + s.substring(1) : null;
     }
 
+    public List<Question> getQuestionsInterval(Interval interval) {
+        System.out.println(interval);
+        Cursor cursor = null;
+        List<Question> questions = new ArrayList<>();
+        try {
+            cursor = database.query(DataBaseHelper.TABLE_QUESTION,
+                    new String[]{
+                            DataBaseHelper.TABLE_KEY_ID,
+                            DataBaseHelper.TABLE_KEY_BODY,
+                            DataBaseHelper.TABLE_KEY_CATEGORY,
+                            DataBaseHelper.TABLE_KEY_IMG,
+                            DataBaseHelper.TABLE_KEY_COMMENT},
+                    DataBaseHelper.TABLE_KEY_CATEGORY + " LIKE ? LIMIT ? offset ? ", new String[]{String.valueOf("%" + interval.getCategory().toLowerCase() + "%"),
+                            String.valueOf(interval.getFinish() - interval.getStart()),
+                            String.valueOf(interval.getStart()-1)},
+                    null, null, null, null
+            );
+            if (cursor.moveToFirst()) {
+                do {
+                    Question question = new Question();
+                    question.setId(cursor.getInt(0));
+                    question.setBody(stringToUpperCase(cursor.getString(1)));
+                    question.setCategory(stringToUpperCase(cursor.getString(2)));
+                    question.setImg(cursor.getString(3));
+                    question.setComment(stringToUpperCase(cursor.getString(4)));
+                    questions.add(question);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        AnswerDAO answerDAO = new AnswerDAO(context);
+        for (Question q : questions) {
+            List<Answer> answers = answerDAO.getAnswerByParentId(q.getId());
+            q.getAnswers().addAll(answers);
+        }
+
+        return questions;
+
+    }
 }
