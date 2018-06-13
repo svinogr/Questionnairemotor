@@ -18,7 +18,7 @@ import info.upump.questionnairegranjpravo.R;
  */
 
 public class DataBaseHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String DATABASE_NAME = "questionnaire.db";
     public static final String TABLE_QUESTION = "QUESTION";
     public static final String TABLE_ANSWER = "ANSWER";
