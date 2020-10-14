@@ -1,6 +1,7 @@
 package info.upump.questionnairemotor;
 
 import android.app.Activity;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -114,13 +115,13 @@ public class Reader {
 
         try {
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(activity.getAssets().open("data.json"), "UTF-8"));
+                    new InputStreamReader(activity.getAssets().open("data.json"), "windows-1251"));
             String line;
-
 
             while ((line = reader.readLine()) != null) {
                 text.append(line);
             }
+            System.out.println(line);
         } catch (IOException e) {
             e.printStackTrace();
         }

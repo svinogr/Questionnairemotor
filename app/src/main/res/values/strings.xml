@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Дельта Моторист</string>
+    <string name="app_name">Дельта Электрик</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -9,15 +9,15 @@
       С комментариями
     </string>
     <string name="nav_serch_name">Поиск</string>
-    <string name="nav_nav_captain">Моторист</string>
+    <string name="nav_nav_captain">Электрик</string>
     <string name="nav_senior_assistant">Старшие помощники капитана</string>
     <string name="nav_watch_mate_assistant">Вахтенные помощники капитана</string>
     <string name="mailto">Обратная связь</string>
     <string name="number_search">№</string>
     <string name="drawer_down_text">Дельта Тест: Вопросы и ответы</string>
-    <string name="drawer_up_text">Моторист</string>
-    <string name="subject_mail">Дельта Тест. Моторист</string>
+    <string name="drawer_up_text">Электрик</string>
+    <string name="subject_mail">Дельта Тест. Электрик</string>
     <string name="email_mail">updeveloper3y@gmail.com</string>
     <string name="data_base_path">/data/data/info.upump.questionnairemotor/databases/</string>
-    <string name="mail_subject">Дельта Тест. Моторист</string>
+    <string name="mail_subject">Дельта Тест. Электрик</string>
 </resources>

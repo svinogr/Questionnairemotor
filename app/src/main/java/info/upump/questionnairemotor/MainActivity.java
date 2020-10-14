@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.replace(R.id.mainContainer, fragment, fragment.getTag());
         fragmentTransaction.commit();
 
-      /*  Reader reader = new Reader(this);
+   /*     Reader reader = new Reader(this);
         try {
             reader.startReader();
             reader.writeInDb();
