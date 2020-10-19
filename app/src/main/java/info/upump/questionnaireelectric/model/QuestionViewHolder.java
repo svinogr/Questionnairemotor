@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.model;
+package info.upump.questionnaireelectric.model;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import info.upump.questionnairemotor.R;
+import info.upump.questionnaireelectric.R;
 
 /**
  * Created by explo on 23.09.2017.

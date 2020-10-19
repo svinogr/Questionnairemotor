@@ -1,11 +1,11 @@
-package info.upump.questionnairemotor.adapter;
+package info.upump.questionnaireelectric.adapter;
 
 import android.app.Activity;
 import android.view.View;
 
 import java.util.List;
 
-import info.upump.questionnairemotor.entity.Question;
+import info.upump.questionnaireelectric.entity.Question;
 
 /**
  * Created by explo on 15.10.2017.

@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor;
+package info.upump.questionnaireelectric;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.json.JSONException;
-
-import java.io.IOException;
-
-import info.upump.questionnairemotor.db.DataBaseHelper;
+import info.upump.questionnaireelectric.db.DataBaseHelper;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

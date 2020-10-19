@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.db;
+package info.upump.questionnaireelectric.db;
 
 import android.content.ContentValues;
 import android.content.Context;

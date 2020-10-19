@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.adapter;
+package info.upump.questionnaireelectric.adapter;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -13,12 +13,12 @@ import android.widget.LinearLayout;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import info.upump.questionnairemotor.R;
-import info.upump.questionnairemotor.entity.Answer;
-import info.upump.questionnairemotor.entity.Question;
-import info.upump.questionnairemotor.filter.CategoryFilter;
-import info.upump.questionnairemotor.model.QuestionViewHolder;
-import info.upump.questionnairemotor.task.TaskGetAnswer;
+import info.upump.questionnaireelectric.R;
+import info.upump.questionnaireelectric.entity.Answer;
+import info.upump.questionnaireelectric.entity.Question;
+import info.upump.questionnaireelectric.filter.CategoryFilter;
+import info.upump.questionnaireelectric.model.QuestionViewHolder;
+import info.upump.questionnaireelectric.task.TaskGetAnswer;
 
 /**
  * Created by explo on 23.09.2017.

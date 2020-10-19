@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.db;
+package info.upump.questionnaireelectric.db;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,7 +8,7 @@ import android.support.v4.content.AsyncTaskLoader;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.upump.questionnairemotor.entity.Question;
+import info.upump.questionnaireelectric.entity.Question;
 
 /**
  * Created by explo on 09.10.2017.

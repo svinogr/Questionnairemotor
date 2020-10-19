@@ -1,7 +1,6 @@
-package info.upump.questionnairemotor;
+package info.upump.questionnaireelectric;
 
 import android.app.Activity;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,10 +12,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.upump.questionnairemotor.db.AnswerDAO;
-import info.upump.questionnairemotor.db.QuestionDAO;
-import info.upump.questionnairemotor.entity.Answer;
-import info.upump.questionnairemotor.entity.Question;
+import info.upump.questionnaireelectric.db.AnswerDAO;
+import info.upump.questionnaireelectric.db.QuestionDAO;
+import info.upump.questionnaireelectric.entity.Answer;
+import info.upump.questionnaireelectric.entity.Question;
 
 /**
  * Created by explo on 23.09.2017.

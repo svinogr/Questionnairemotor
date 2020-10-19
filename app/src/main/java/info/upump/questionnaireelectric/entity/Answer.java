@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.entity;
+package info.upump.questionnaireelectric.entity;
 
 /**
  * Created by explo on 23.09.2017.

@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.task;
+package info.upump.questionnaireelectric.task;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -12,10 +12,10 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.upump.questionnairemotor.db.AnswerDAO;
-import info.upump.questionnairemotor.entity.Answer;
-import info.upump.questionnairemotor.entity.Question;
-import info.upump.questionnairemotor.model.QuestionViewHolder;
+import info.upump.questionnaireelectric.db.AnswerDAO;
+import info.upump.questionnaireelectric.entity.Answer;
+import info.upump.questionnaireelectric.entity.Question;
+import info.upump.questionnaireelectric.model.QuestionViewHolder;
 
 
 public class TaskGetAnswer extends AsyncTask<Integer, Void, List<Answer>> {

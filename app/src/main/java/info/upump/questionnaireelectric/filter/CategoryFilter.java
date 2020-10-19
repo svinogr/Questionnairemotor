@@ -1,12 +1,12 @@
-package info.upump.questionnairemotor.filter;
+package info.upump.questionnaireelectric.filter;
 
 import android.widget.Filter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import info.upump.questionnairemotor.adapter.QuestionAdapter;
-import info.upump.questionnairemotor.entity.Question;
+import info.upump.questionnaireelectric.adapter.QuestionAdapter;
+import info.upump.questionnaireelectric.entity.Question;
 
 /**
  * Created by explo on 15.10.2017.

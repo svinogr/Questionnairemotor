@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.entity;
+package info.upump.questionnaireelectric.entity;
 
 import java.util.ArrayList;
 import java.util.List;

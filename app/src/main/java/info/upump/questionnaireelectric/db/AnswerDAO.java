@@ -1,10 +1,10 @@
-package info.upump.questionnairemotor.db;
+package info.upump.questionnaireelectric.db;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
-import info.upump.questionnairemotor.entity.Answer;
+import info.upump.questionnaireelectric.entity.Answer;
 
 /**
  * Created by explo on 27.09.2017.

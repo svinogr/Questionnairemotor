@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor;
+package info.upump.questionnaireelectric;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,10 +19,10 @@ import android.widget.ProgressBar;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.upump.questionnairemotor.adapter.QuestionAdapter;
-import info.upump.questionnairemotor.adapter.QuestionAdapterWithoutComment;
-import info.upump.questionnairemotor.db.MyLoader;
-import info.upump.questionnairemotor.entity.Question;
+import info.upump.questionnaireelectric.adapter.QuestionAdapter;
+import info.upump.questionnaireelectric.adapter.QuestionAdapterWithoutComment;
+import info.upump.questionnaireelectric.db.MyLoader;
+import info.upump.questionnaireelectric.entity.Question;
 
 /**
  * Created by explo on 11.10.2017.

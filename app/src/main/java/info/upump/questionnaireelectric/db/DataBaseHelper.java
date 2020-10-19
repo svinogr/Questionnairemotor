@@ -1,4 +1,4 @@
-package info.upump.questionnairemotor.db;
+package info.upump.questionnaireelectric.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import info.upump.questionnairemotor.R;
+import info.upump.questionnaireelectric.R;
 
 /**
  * Created by explo on 26.09.2017.
